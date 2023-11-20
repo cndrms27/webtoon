@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	  layout:decorate="~{layouts/layout}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<div layout:fragment="content">
+<div id="main">
+<h1>White Toon</h1>
+
+
+
+
+<th:block th:if="${session.mdto==null}">
+	<p>
+		<a href="/user/login">SignIn</a>
+		<a href="/user/addUser">SignUp</a>
+	</p>
+</th:block>
+<th:block th:unless="${session.mdto==null}">
+<!--	<p>-->
+<!--		<span th:text="${session.mdto.role}"></span>-->
+<!--		<span th:text="${session.mdto.id}"></span>-->
+<!--		<a href="/user/logout">로그아웃</a>-->
+<!--	</p>-->
+</th:block>
+
+<div calss="container">
+	
+	
+ <div class="f_tag" id="profile">
+  <div class="main_2">
+  <a class="btn_tag_0">전체</a>
+  <a class="btn_tag_1">학원</a>
+  <a class="btn_tag_2">액션</a>
+  <a class="btn_tag_3">스토리</a>
+  <a class="btn_tag_4">판타지</a>
+  <a class="btn_tag_5">개그/코믹</a>
+  <a class="btn_tag_6">연애/순정</a>
+  <a class="btn_tag_7">드라마</a>
+  <a class="btn_tag_8">로맨스</a>
+  <a class="btn_tag_9">시대극</a>
+  <a class="btn_tag_10">스포츠</a>
+  <a class="btn_tag_11">일상</a>
+  <a class="btn_tag_12">성인</a>
+  <a class="btn_tag_13">공포/스릴러</a>
+  <a class="btn_tag_14">무협</a>
+  </div>
+ </div>
+	
+	<div id="webtoon-container">
+
+    <div class="calendar-grid">
+        <!-- Repeat the following block for each webtoon item -->
+        <div class="webtoon-item">
+            <img src="webtoon1.jpg" alt="Webtoon 1 Image">
+            <h3>Webtoon Title 1</h3>
+            <p>연재중비중입니다.</p>
+            <a href="/webtoon1">Read More</a>
+        </div>
+
+        <div class="webtoon-item">
+            <img src="webtoon2.jpg" alt="Webtoon 2 Image">
+            <h3>Webtoon Title 2</h3>
+            <p>완결된 웹툰.</p>
+            <a href="/webtoon2">Read More</a>
+        </div>
+
+		<div class="webtoon-item">
+            <img src="webtoon3.jpg" alt="Webtoon 3 Image">
+            <h3>Webtoon Title 3</h3>
+            <p>완결된 웹툰.</p>
+            <a href="/webtoon2">Read More</a>
+        </div>
+        
+        <div class="webtoon-item">
+            <img src="webtoon4.jpg" alt="Webtoon 4 Image">
+            <h3>Webtoon Title 4</h3>
+            <p>완결된 웹툰.</p>
+            <a href="/webtoon2">Read More</a>
+        </div>
+        
+        <div class="webtoon-item">
+            <img src="webtoon4.jpg" alt="Webtoon 4 Image">
+            <h3>Webtoon Title 4</h3>
+            <p>완결된 웹툰.</p>
+            <a href="/webtoon2">Read More</a>
+        </div>
+        
+        <div class="webtoon-item">
+            <img src="webtoon5.jpg" alt="Webtoon 5 Image">
+            <h3>Webtoon Title 5</h3>
+            <p>완결된 웹툰.</p>
+            <a href="/webtoon2">Read More</a>
+        </div>
+        
+        <div class="webtoon-item">
+            <img src="webtoon6.jpg" alt="Webtoon 6 Image">
+            <h3>Webtoon Title 6</h3>
+            <p>완결된 웹툰.</p>
+            <a href="/webtoon2">Read More</a>
+        </div>
+        
+        <div class="webtoon-item">
+            <img src="webtoon7.jpg" alt="Webtoon 7 Image">
+            <h3>Webtoon Title 7</h3>
+            <p>완결된 웹툰.</p>
+            <a href="/webtoon2">Read More</a>
+        </div>
+        
+        <div class="webtoon-item">
+            <img src="webtoon8.jpg" alt="Webtoon 8 Image">
+            <h3>Webtoon Title 8</h3>
+            <p>완결된 웹툰.</p>
+            <a href="/webtoon2">Read More</a>
+        </div>
+        
+        <div class="webtoon-item">
+            <img src="webtoon9.jpg" alt="Webtoon 9 Image">
+            <h3>Webtoon Title 9</h3>
+            <p>완결된 웹툰.</p>
+            <a href="/webtoon2">Read More</a>
+        </div>
+    </div>
+</div>
+
+
+<div calss="container">
+	
+	
+
+ 
+
+ </div>
+ </div>
+ </div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

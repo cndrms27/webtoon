@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+
+.content{
+	margin: 140px 200px;
+	text-align:center;   
+	color:white;
+}
+
+#container{
+		width: 1000px;
+		margin: 0 auto;
+	}
+	
+#footer{
+		background-color: #3c3c3c;
+		position:absolute;
+		bottom:0px;
+		left:0px;
+		right:0px;
+		color:white;
+		line-height: 50px;
+		height: 50px;
+		text-align: center;
+		font-size:25px;
+	}
+	
+.errorField{
+	color : red;
+}	
+body{
+	background-color:#5a5a5a;
+}
+
+
+ body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #000; /* Set the background color of the body to black */
+        color: #fff; /* Set the text color to white */
+    }
+
+    #webtoon-container {
+        width: 80%;
+        margin: 0 auto;
+        background-color: #000; /* Set the background color of the container to black */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .calendar-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .webtoon-item {
+        flex: 1;
+        background-color: #fff;
+        color: #000; /* Set the text color inside each item to black */
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
