@@ -37,14 +37,14 @@ body{
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #000; /* Set the background color of the body to black */
+        background-color: #000; 
         color: #fff; /* Set the text color to white */
     }
 
     #webtoon-container {
         width: 80%;
         margin: 0 auto;
-        background-color: #000; /* Set the background color of the container to black */
+        background-color: #000; 
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
