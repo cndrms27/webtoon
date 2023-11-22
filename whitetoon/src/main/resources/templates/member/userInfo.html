@@ -34,24 +34,24 @@
 						</tr>
 						<tr>
 							<th>등급</th>
-							<td th:text="${dto.role}"</td>
+							<td th:text="${dto.role}"></td>
 						</tr>
 						<tr>
 							<th>주소</th>
 							<td>
-								<input type="text" name="address" value="${dto.address}"/>
+								<input type="text" name="address" th:value="${dto.address}"/>
 							</td>
 						</tr>
 						<tr>
 							<th>이메일</th>
 							<td>
-								<input type="email" name="email" value="${dto.email}"/>
+								<input type="email" name="email" th:value="${dto.email}"/>
 							</td>
 						</tr>
 						<tr>
 							<td colspan="2">
 								<button type="submit">수정</button>
-								<button type="button" onclick="delUser('${dto.id}')">탈퇴</button>
+								<button type="button" th:onclick="delUser('${dto.id}')">탈퇴</button>
 							</td>
 						</tr>
 					</table>
