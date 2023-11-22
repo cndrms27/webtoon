@@ -8,60 +8,63 @@
 		location.href="delUser.user?id="+id;
 	}
 </script>
+<style type="text/css">
+body{
+        font-family: Arial, sans-serif;
+        margin: 90;
+        padding: 10;
+        background-color: #000;
+        color: #fff;
+    }
+
+   
+
+</style>
 </head>
 <body>
 <div id="container">
-	<div class="main">
-		<div class="lead">
-			<span>[[${session.mdto.id}]] [[${session.mdto.role}]]님이 로그인 함</span> |
-			<span><a href="userController.jsp?command=myinfo&id=${ldto.id}">나의정보</a></span> |
-			<span><a href="userController.jsp?command=logout">로그아웃</a></span>
-		</div>
-		<div class="contents">
-			<h1>사용자 페이지</h1>
-			<h2>나의 정보</h2>
-			<div id="myinfo">
-				<form action="updateUser.user" method="post">
-					<input type="hidden" name="id" value="${ldto.id}"/>
-					<table class="table">
-						<tr>
-							<th>아이디</th>
-							<td th:text="${dto.id}"></td>
-						</tr>
-						<tr>
-							<th>이름</th>
-							<td th:text="${dto.name}"></td>
-						</tr>
-						<tr>
-							<th>등급</th>
-							<td th:text="${dto.role}"></td>
-						</tr>
-						<tr>
-							<th>주소</th>
-							<td>
-								<input type="text" name="address" th:value="${dto.address}"/>
-							</td>
-						</tr>
-						<tr>
-							<th>이메일</th>
-							<td>
-								<input type="email" name="email" th:value="${dto.email}"/>
-							</td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<button type="submit">수정</button>
-								<button type="button" th:onclick="delUser('${dto.id}')">탈퇴</button>
-							</td>
-						</tr>
-					</table>
-				</form>
-			</div>
-		</div>
-	</div>
+    <div class="main">
+        <div class="lead">
+            <span>[[${session.mdto.id}]]님이 로그인 함</span> |
+            <span><a th:href="@{/user/userinfo(id=${dto.id})}">나의정보</a></span> |
+            <span><a th:href="@{/user/logout}">로그아웃</a></span>
+        </div>
+        <div class="contents">
+            <h2>나의 정보</h2>
+            <div id="userinfo">
+                <form th:action="@{/user/update}" th:object="${dto}" method="post">
+                    <table class="table">
+                        <tr>
+                            <th>아이디</th>
+                            <td th:text="${dto.id}"></td>
+                        </tr>
+                        <tr>
+                            <th>이름</th>
+                            <td th:text="${dto.name}"></td>
+                        </tr>
+                        <tr>
+                            <th>주소</th>
+                            <td>
+                                <input type="text" th:field="*{address}"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>이메일</th>
+                            <td>
+                                <input type="email" th:field="*{email}"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button type="submit">수정</button>
+                                <a th:href="@{/user/delete(id=${dto.id})}"><button type="button">탈퇴</button></a>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
-<%@include file="footer.jsp" %>
 </body>
 </html>
-
-

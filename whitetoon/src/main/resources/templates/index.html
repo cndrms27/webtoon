@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+     layout:decorate="~{thymeleaf/layouts/layout}">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<div layout:fragment="content">
+    <h2>Webtoons</h2>
+    <ul>
+        <!-- Loop through webtoons and display them -->
+        <li th:each="webtoon : ${webtoons}">
+            <p th:text="${webtoon.title}"></p>
+            <p th:text="${webtoon.description}"></p>
+            <img th:src="${webtoon.imageUrl}" alt="Webtoon Image">
+            <p th:text="${webtoon.genre}"></p>
+            <p th:text="${webtoon.author}"></p>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
