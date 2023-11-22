@@ -15,9 +15,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.hk.board.command.AddUserCommand;
 import com.hk.board.command.LoginCommand;
+import com.hk.board.dtos.MemberDto;
 import com.hk.board.service.MemberService;
 
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping(value = "/user")
@@ -102,9 +104,16 @@ public class MemberController {
 	}
 	
 	//나의 정보 조회
-	
+	@GetMapping(value="/userinfo")
+	public String userinfo(Model model, HttpServletRequest request) {
+		HttpSession session=request.getSession();
+		MemberDto mdto=(MemberDto)session.getAttribute("mdto");
+		MemberDto dto=memberService.getUser(mdto.getId());
+		model.addAttribute("dto", dto);
+		return "member/userinfo";
+	}
 	//나의 정보 수정
-	
+	// dto에 꺼내서 담아서 userinfo 페이지로 보내고 
 }
 
 
